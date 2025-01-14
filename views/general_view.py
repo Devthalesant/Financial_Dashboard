@@ -9,7 +9,7 @@ import plotly.express as px
 st.title("Visão Geral - teeste")
 
 year_optinos = [2024, 2025]
-st.pills("Ano de Análise :",year_optinos, selection_mode = "multi" )
+st.multiselect("Ano de Análise :",year_optinos, default =year_optinos)
 
 # # Getting a dataframe of billchaeges
 # billcharges_df = get_dataframe_from_mongodb(collection_name="billcharges_db", database_name="dash_midia")
