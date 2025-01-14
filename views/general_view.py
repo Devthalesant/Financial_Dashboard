@@ -20,7 +20,8 @@ pd.read_csv(database)
 
 billcharges_df = pd.read_csv(database)
 
-new_df = treating_values(billcharges_df)
+# não estou usando o treating_values pois o dataframe salvo ja está tratado
+new_df = billcharges_df
 
 st.dataframe(new_df)
 
