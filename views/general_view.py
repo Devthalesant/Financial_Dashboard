@@ -3,31 +3,32 @@ from auxiliar.catching_and_treating_values_functions import *
 from auxiliar.groupby import *
 import streamlit as st
 import pandas as pd
+import re
 import plotly.express as px
 
-st.title("Visão Geral - teste")
+st.title("Visão Geral - teeste")
 
-# Opções de anos a serem selecionadas
-year_options = [2024, 2025]
-selected_years = st.multiselect("Ano de Análise:", year_options, default=year_options)
+year_optinos = [2024, 2025]
+st.pills("Ano de Análise :",year_optinos, selection_mode = "multi" )
 
-# Carregar o DataFrame
-database = "/content/Financial_Dashboard/bases/billcharges10jan.csv"
+# # Getting a dataframe of billchaeges
+# billcharges_df = get_dataframe_from_mongodb(collection_name="billcharges_db", database_name="dash_midia")
+
+database = "database/billcharges10jan.csv"
+
+pd.read_csv(database)
+
 billcharges_df = pd.read_csv(database)
 
-# Criar a coluna ANO se não existir
-if 'DATA' in billcharges_df.columns:
-    billcharges_df['ANO'] = pd.to_datetime(billcharges_df['DATA']).dt.year
-
-# Usar o DataFrame já tratado
+# não estou usando o treating_values pois o dataframe salvo ja está tratado
 new_df = billcharges_df
 
-# Exibir o DataFrame
+
 st.dataframe(new_df)
 
-# Gerar o gráfico
-if selected_years:
-    grafico = grafico_barras_vendas(new_df, selected_years)
-    st.plotly_chart(grafico)
-else:
-    st.write("Por favor, selecione um ou mais anos para visualizar o gráfico.")
+# para gráfico no ploty
+grafico = grafico_barras_vendas(new_df,year_optinos)
+st.plotly_chart(grafico)
+
+## tratar dados, salvar em csv, importar e trabalhar em cima disso para seguir com o deenvolvimento
+# os dados ja estão na pasta base de dados do git. como eu puxo eles para esse bloco de código? não lebro
