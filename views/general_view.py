@@ -22,6 +22,8 @@ billcharges_df = pd.read_csv(database)
 
 new_df = treating_values(billcharges_df)
 
+st.dataframe(new_df)
+
 # para gráfico no ploty
 grafico = grafico_barras_vendas(new_df)
 st.plotly_chart(grafico)
