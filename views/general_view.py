@@ -27,7 +27,7 @@ new_df["ANO"] = new_df['ANO'].astype(str)
 st.dataframe(new_df)
 
 # para gráfico no ploty
-grafico = grafico_barras_vendas(new_df)
+grafico = grafico_barras_vendas(new_df,year_optinos)
 st.plotly_chart(grafico)
 
 ## tratar dados, salvar em csv, importar e trabalhar em cima disso para seguir com o deenvolvimento
