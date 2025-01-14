@@ -22,7 +22,7 @@ billcharges_df = pd.read_csv(database)
 
 # não estou usando o treating_values pois o dataframe salvo ja está tratado
 new_df = billcharges_df
-
+new_df["ANO"] = new_df['ANO'].astype(str)
 st.dataframe(new_df)
 
 # para gráfico no ploty
