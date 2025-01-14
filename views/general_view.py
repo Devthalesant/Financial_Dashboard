@@ -13,7 +13,7 @@ st.pills("Ano de Análise :",year_optinos, selection_mode = "multi" )
 # # Getting a dataframe of billchaeges
 # billcharges_df = get_dataframe_from_mongodb(collection_name="billcharges_db", database_name="dash_midia")
 
-database = "Financial_Dashboard/database/billcharges10jan.csv"
+database = "database/billcharges10jan.csv"
 
 pd.read_csv(database)
 
