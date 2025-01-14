@@ -19,10 +19,9 @@ database = "database/billcharges10jan.csv"
 pd.read_csv(database)
 
 billcharges_df = pd.read_csv(database)
+billcharges_df["ANO"] = billcharges_df["PERIODO"].str[:4]
 
 new_df = treating_values(billcharges_df)
-
-st.dataframe(new_df)
 
 # para gráfico no ploty
 grafico = grafico_barras_vendas(new_df)
