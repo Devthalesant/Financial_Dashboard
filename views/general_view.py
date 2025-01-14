@@ -1,4 +1,4 @@
-from pymongo import MongoClient, UpdateOne
+# from pymongo import MongoClient, UpdateOne
 from auxiliar.catching_and_treating_values_functions import *
 from auxiliar.groupby import *
 import streamlit as st
