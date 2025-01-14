@@ -5,3 +5,4 @@ st-gsheets-connection
 datetime
 pymongo
 plotly
+px
