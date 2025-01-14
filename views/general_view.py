@@ -4,6 +4,7 @@ from auxiliar.groupby import *
 import streamlit as st
 import pandas as pd
 import re
+import plotly.express as px
 
 st.title("Visão Geral - Perído")
 
