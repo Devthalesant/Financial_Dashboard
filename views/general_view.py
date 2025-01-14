@@ -8,7 +8,7 @@ import plotly.express as px
 
 st.title("Visão Geral - teeste")
 
-year_optinos = ["2024", "2025"]
+year_optinos = [2024, 2025]
 st.pills("Ano de Análise :",year_optinos, selection_mode = "multi" )
 
 # # Getting a dataframe of billchaeges
@@ -22,7 +22,7 @@ billcharges_df = pd.read_csv(database)
 
 # não estou usando o treating_values pois o dataframe salvo ja está tratado
 new_df = billcharges_df
-new_df["ANO"] = new_df['ANO'].astype(str)
+
 
 st.dataframe(new_df)
 
