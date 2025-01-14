@@ -24,10 +24,6 @@ new_df = treating_values(billcharges_df)
 
 st.dataframe(new_df)
 
-sell_groupby = new_df.groupby(["PERIODO"]).agg({"TOTAL LÍQUIDO ITEM" : "sum"}).reset_index()
-
-st.bar_chart(sell_groupby, x="PERIODO" , y="TOTAL LÍQUIDO ITEM")
-
 # para gráfico no ploty
 grafico = grafico_barras_vendas(new_df)
 st.plotly_chart(grafico)
