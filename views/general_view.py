@@ -9,8 +9,11 @@ st.title("Visão Geral - Perído")
 
 year_optinos = [2024, 2025]
 st.pills("Ano de Análise :",year_optinos, selection_mode = "multi" )
+
 # # Getting a dataframe of billchaeges
 # billcharges_df = get_dataframe_from_mongodb(collection_name="billcharges_db", database_name="dash_midia")
+
+
 
 st.dataframe(new_df)
 grafico = grafico_barras_vendas(new_df)
