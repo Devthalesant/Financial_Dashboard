@@ -1,0 +1,8 @@
+
+streamlit
+pandas
+st-gsheets-connection
+datetime
+pymongo
+plotly
+plotly.express
